@@ -37,18 +37,18 @@
 
 <section class="section couple" id="mempelai"><div class="wrap reveal">
 <div class="center"><div class="kicker">Dengan penuh cinta</div><h2 class="title">Salma Latifah & Najib Hudori</h2><div class="ornline">❧</div></div>
-<div class="photo" style="margin-top:35px"><img src="assets/foto1.jpg" alt="Foto utama Salma & Najib"><span>FOTO UTAMA</span></div>
+<div class="photo" style="margin-top:35px"><img src="foto1.jpg" alt="Foto utama Salma & Najib"><span>FOTO UTAMA</span></div>
 <div class="grid"><div class="card"><div class="kicker">Mempelai Wanita</div><h3>Salma Latifah</h3><p>Putri Ketiga dari<br><b>Bpk. U Hasan & Ibu Ilis</b></p></div><div class="card"><div class="kicker">Mempelai Pria</div><h3>Najib Hudori</h3><p>Putra Ketiga dari<br><b>Bpk. U Sutarman & Ibu Iyay Maryati</b></p></div></div>
 </div></section>
 
 <section class="section gallery" id="galeri"><div class="wrap reveal"><div class="center"><div class="kicker">Our Memories</div><h2 class="title">6 Foto Kenangan</h2><div class="ornline">✦</div></div>
 <div class="slider"><div class="slides" id="slides">
-<div class="slide"><img src="assets/foto1.jpg" alt="Foto 1"><span>Salma & Najib • 01</span></div>
-<div class="slide"><img src="assets/foto2.jpg" alt="Foto 2"><span>Salma & Najib • 02</span></div>
-<div class="slide"><img src="assets/foto3.jpg" alt="Foto 3"><span>Salma & Najib • 03</span></div>
-<div class="slide"><img src="assets/foto4.jpg" alt="Foto 4"><span>Salma & Najib • 04</span></div>
-<div class="slide"><img src="assets/foto5.jpg" alt="Foto 5"><span>Salma & Najib • 05</span></div>
-<div class="slide"><img src="assets/foto6.jpg" alt="Foto 6"><span>Salma & Najib • 06</span></div>
+<div class="slide"><img src="foto1.jpg" alt="Foto 1"><span>Salma & Najib • 01</span></div>
+<div class="slide"><img src="foto2.jpg" alt="Foto 2"><span>Salma & Najib • 02</span></div>
+<div class="slide"><img src="foto3.jpg" alt="Foto 3"><span>Salma & Najib • 03</span></div>
+<div class="slide"><img src="foto4.jpg" alt="Foto 4"><span>Salma & Najib • 04</span></div>
+<div class="slide"><img src="foto5.jpg" alt="Foto 5"><span>Salma & Najib • 05</span></div>
+<div class="slide"><img src="foto6.jpg" alt="Foto 6"><span>Salma & Najib • 06</span></div>
 </div><button class="slidebtn prev" onclick="moveSlide(-1)">‹</button><button class="slidebtn next" onclick="moveSlide(1)">›</button></div>
 <div class="dots" id="dots"></div></div></section>
 
@@ -92,38 +92,37 @@ function submitRsvp(e){
  const hadir=document.getElementById('hadir').value;
  const jumlah=document.getElementById('jumlah').value;
  const pesan=document.getElementById('pesan').value;
- const nomor='6281234567890'; // GANTI DENGAN NOMOR WHATSAPP PANITIA
+ const nomor='6281234567890';
  const text=`Assalamu'alaikum Salma & Najib.%0A%0ANama: ${encodeURIComponent(nama)}%0AKehadiran: ${encodeURIComponent(hadir)}%0AJumlah tamu: ${encodeURIComponent(jumlah)}%0AUcapan: ${encodeURIComponent(pesan)}`;
  window.open(`https://wa.me/${nomor}?text=${text}`,'_blank');
 }
 
-let playing=false;
-function toggleMusic(){const a=document.getElementById('audio');const b=document.getElementById('musicBtn');if(!a.src){alert('Tambahkan file assets/musik.mp3 terlebih dahulu.');return}if(a.paused){a.play().then(()=>{playing=true;b.textContent='Ⅱ';b.classList.add('playing')}).catch(()=>alert('Tekan tombol musik sekali lagi untuk memulai.'))}else{a.pause();playing=false;b.textContent='♪';b.classList.remove('playing')}}
+const audio=document.getElementById('audio');
+const musicBtn=document.getElementById('musicBtn');
 
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
- const audio = document.getElementById('audio');
-const musicBtn = document.getElementById('musicBtn');
-
-function openInvitation() {
-  document.getElementById('mempelai').scrollIntoView();
-
-  audio.play().then(() => {
-    musicBtn.textContent = 'Ⅱ';
-    musicBtn.classList.add('playing');
-  }).catch(() => {});
+function setMusicPlaying(state){
+ musicBtn.textContent=state?'Ⅱ':'♪';
+ musicBtn.classList.toggle('playing',state);
 }
 
-function toggleMusic() {
-  if (audio.paused) {
-    audio.play().then(() => {
-      musicBtn.textContent = 'Ⅱ';
-      musicBtn.classList.add('playing');
-    });
-  } else {
-    audio.pause();
-    musicBtn.textContent = '♪';
-    musicBtn.classList.remove('playing');
-  }
+function toggleMusic(){
+ if(audio.paused){
+   audio.play().then(()=>setMusicPlaying(true)).catch(()=>{});
+ }else{
+   audio.pause();
+   setMusicPlaying(false);
  }
+}
+
+function openInvitation(){
+ document.getElementById('mempelai').scrollIntoView({behavior:'smooth'});
+ audio.play().then(()=>setMusicPlaying(true)).catch(()=>{});
+}
+
+audio.addEventListener('play',()=>setMusicPlaying(true));
+audio.addEventListener('pause',()=>setMusicPlaying(false));
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
 </script>
 </body></html>
