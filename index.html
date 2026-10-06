@@ -186,4 +186,243 @@
   display:block;width:100%;height:auto;aspect-ratio:9/16;
   object-fit:cover;border-radius:17px;background:#173b4a;
 }
-.video-caption{padding:15px 8px 8px;text-align
+.video-caption{padding:15px 8px 8px;text-align:center}
+.video-caption strong{display:block;color:#31576b;font-weight:400;font-size:20px}
+.video-caption span{display:block;margin-top:5px;color:#758a94;font:11px Arial,sans-serif;letter-spacing:1px}
+.video-note{max-width:680px;margin:0 auto;color:#6d818c;font:13px/1.7 Arial,sans-serif}
+@media(max-width:650px){.video-grid{grid-template-columns:1fr}.initial-logo{width:68px;height:68px}}
+
+</style>
+</head>
+<body>
+<div class="page">
+
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="frame" aria-hidden="true"></div>
+
+  <div class="ornament-layer" aria-hidden="true">
+    <span class="float-orn o1">❧</span>
+    <span class="float-orn o2">❧</span>
+    <span class="float-orn o3">✦</span>
+    <span class="float-orn o4">❧</span>
+    <span class="mendung-line ml1"></span>
+    <span class="mendung-line ml2"></span>
+  </div>
+
+  <div class="hero-content opening-pro">
+    <div class="initial-logo" aria-label="Inisial Salma & Najib"><span class="s">S</span><span class="n">N</span><span class="dot">✦</span></div>
+    <div class="opening-top">THE WEDDING OF</div>
+    <div class="opening-small">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+    <div class="opening-rule"><span>✦</span></div>
+    <div class="names">Salma <span class="amp">&amp;</span> Najib</div>
+    <div class="date">25 OKTOBER 2026</div>
+
+    <div class="guest-box">
+      <div class="guest-label">Kepada Yth.</div>
+      <div class="guest-name" id="guestName">Tamu Undangan</div>
+    </div>
+
+    <p class="opening-note">Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir di hari istimewa kami.</p>
+
+    <button class="btn opening-btn" onclick="openInvitation()">
+      <span>BUKA UNDANGAN</span>
+      <b>↓</b>
+    </button>
+  </div>
+</section>
+
+<section class="section couple" id="mempelai"><div class="wrap reveal">
+<div class="center"><div class="kicker">Dengan penuh cinta</div><h2 class="title">Salma Latifah & Najib Hudori</h2><div class="ornline">❧</div></div>
+<div class="photo lux-card" style="margin-top:35px"><img src="foto1.jpg" alt="Foto utama Salma & Najib"><span>FOTO UTAMA</span></div>
+<div class="grid"><div class="card"><div class="kicker">Mempelai Wanita</div><h3>Salma Latifah</h3><p>Putri Ketiga dari<br><b>Bpk. U Hasan & Ibu Ilis</b></p></div><div class="card"><div class="kicker">Mempelai Pria</div><h3>Najib Hudori</h3><p>Putra Ketiga dari<br><b>Bpk. U Sutarman & Ibu Iyay Maryati</b></p></div></div>
+</div></section>
+
+<section class="section gallery" id="galeri"><div class="wrap reveal"><div class="center"><div class="kicker">Our Memories</div><h2 class="title">6 Foto Kenangan</h2><div class="ornline">✦</div></div>
+<div class="slider"><div class="slides" id="slides">
+<div class="slide"><img src="foto1.jpg" alt="Foto 1"><span>Salma & Najib • 01</span></div>
+<div class="slide"><img src="foto2.jpg" alt="Foto 2"><span>Salma & Najib • 02</span></div>
+<div class="slide"><img src="foto3.jpg" alt="Foto 3"><span>Salma & Najib • 03</span></div>
+<div class="slide"><img src="foto4.jpg" alt="Foto 4"><span>Salma & Najib • 04</span></div>
+<div class="slide"><img src="foto5.jpg" alt="Foto 5"><span>Salma & Najib • 05</span></div>
+<div class="slide"><img src="foto6.jpg" alt="Foto 6"><span>Salma & Najib • 06</span></div>
+</div><button class="slidebtn prev" onclick="moveSlide(-1)">‹</button><button class="slidebtn next" onclick="moveSlide(1)">›</button></div>
+<div class="dots" id="dots"></div></div></section>
+
+
+<section class="section video-section" id="video">
+  <div class="wrap reveal">
+    <div class="center">
+      <div class="kicker">Our Story</div>
+      <h2 class="title">Salma &amp; Najib</h2>
+      <div class="ornline">✦</div>
+      <p class="video-note">Sebuah potongan kecil dari perjalanan dan kebahagiaan kami menuju hari istimewa.</p>
+    </div>
+    <div class="video-grid">
+      <article class="video-card">
+        <video controls autoplay muted loop playsinline preload="metadata" poster="foto1.jpg">
+          <source src="video-salma-najib-1.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">
+          <strong>Our Little Story</strong>
+          <span>MOMENT • 01</span>
+        </div>
+      </article>
+      <article class="video-card">
+        <video controls autoplay muted loop playsinline preload="metadata" poster="foto2.jpg">
+          <source src="video-salma-najib-2.mp4" type="video/mp4">
+        </video>
+        <div class="video-caption">
+          <strong>Sweet Memories</strong>
+          <span>MOMENT • 02</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section count" id="countdown"><div class="wrap center reveal"><div class="kicker">Menuju hari bahagia</div><h2 class="title">The Moment</h2><div class="countgrid"><div class="countbox"><div class="num" id="d">--</div><div class="lbl">Hari</div></div><div class="countbox"><div class="num" id="h">--</div><div class="lbl">Jam</div></div><div class="countbox"><div class="num" id="m">--</div><div class="lbl">Menit</div></div><div class="countbox"><div class="num" id="s">--</div><div class="lbl">Detik</div></div></div></div></section>
+
+<section class="section events" id="acara"><div class="wrap reveal">
+<div class="center"><div class="kicker">Save the date</div><h2 class="title">Akad & Resepsi</h2><div class="ornline">❧</div></div>
+<div class="event lux-card" style="margin-top:34px">
+<div class="kicker">Minggu, 25 Oktober 2026</div>
+<h3 style="margin:8px 0 18px;font-size:30px;font-weight:400">Satu Hari, Dua Momen Bahagia</h3>
+<div class="grid" style="margin-top:0">
+<div class="card"><div class="kicker">Akad Nikah</div><h3>10.00–11.00 WIB</h3><p>Mohon hadir tepat waktu untuk menyaksikan momen sakral pernikahan.</p></div>
+<div class="card"><div class="kicker">Resepsi</div><h3>11.00 WIB – Selesai</h3><p>Silaturahmi dan ramah tamah bersama keluarga serta para tamu undangan.</p></div>
+</div>
+<div class="map-card" id="lokasi">
+<iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+src="https://www.google.com/maps?q=Kp.%20Cimanggu%20RT%2FRW%20003%2F009%2C%20Cimangkok%2C%20Sukalarang%2C%20Sukabumi%2043191&output=embed"
+title="Peta lokasi pernikahan Salma & Najib"></iframe>
+<div class="map-meta">
+<h3>Lokasi Pernikahan</h3>
+<p>Kp. Cimanggu RT/RW 003/009<br>Kel. Cimangkok, Kec. Sukalarang<br>Kab. Sukabumi, Jawa Barat 43191</p>
+<div class="map-actions">
+<a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Kp.%20Cimanggu%20RT%2FRW%20003%2F009%20Cimangkok%20Sukalarang%20Sukabumi%2043191">BUKA GOOGLE MAPS ↗</a>
+<a class="alt" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Kp.%20Cimanggu%20RT%2FRW%20003%2F009%20Cimangkok%20Sukalarang%20Sukabumi%2043191">PETUNJUK ARAH ↗</a>
+</div></div></div>
+</div></div></section>
+
+<section class="section prayer"><div class="wrap center reveal"><div class="kicker">Doa untuk kedua mempelai</div><h2 class="title">Barakallahu Lakuma</h2><div class="ornline">✦</div><div class="arabic-dark">اللَّهُمَّ بَارِكْ لَهُمَا وَبَارِكْ عَلَيْهِمَا وَاجْمَعْ بَيْنَهُمَا فِي خَيْرٍ<br>رَبَّنَا هَبْ لَهُمَا مِنْ لَدُنْكَ رَحْمَةً وَبَارِكْ لَهُمَا فِي حَيَاتِهِمَا</div><p class="indo">Semoga Allah SWT memberikan keberkahan kepada keduanya, menyatukan mereka dalam kebaikan, melimpahkan kasih sayang, ketenteraman, serta menjadikan pernikahan mereka keluarga yang sakinah, mawaddah, warahmah.</p></div></section>
+
+<section class="section rsvp" id="rsvp"><div class="wrap reveal"><div class="center"><div class="kicker">Konfirmasi kehadiran</div><h2 class="title">RSVP & Ucapan</h2><p style="font:14px/1.7 Arial;color:#6f7a73">Silakan isi data berikut. Setelah dikirim, data akan diteruskan ke WhatsApp panitia.</p></div><form onsubmit="submitRsvp(event)"><input id="nama" required placeholder="Nama Anda"><select id="hadir" required><option value="">Konfirmasi kehadiran</option><option>InsyaAllah Hadir</option><option>Belum Dapat Memastikan</option><option>Tidak Dapat Hadir</option></select><input id="jumlah" type="number" min="1" max="10" value="1" placeholder="Jumlah tamu"><textarea id="pesan" placeholder="Tuliskan doa dan ucapan..."></textarea><button class="btn" type="submit">KIRIM RSVP VIA WHATSAPP</button>
+<div style="text-align:center;margin-top:4px">
+  <a class="social-link" style="display:inline-flex" target="_blank" rel="noopener noreferrer"
+     href="https://wa.me/6281563308128?text=Assalamu%27alaikum%20Salma%20%26%20Najib%2C%20saya%20ingin%20menghubungi%20terkait%20undangan%20pernikahan.">
+     <span class="social-icon" style="background:#25D366">☏</span><span>Chat WhatsApp Panitia</span>
+  </a>
+</div></form></div></section>
+
+<section class="section gift" id="gift"><div class="wrap center reveal"><div class="kicker">Tanda kasih</div><h2 class="title">Wedding Gift</h2><div class="giftgrid"><div class="bank"><div class="owner">SALMA LATIFAH</div><div class="bankname">BANK OCBC</div><div class="account">042810082265</div><button class="btn copy" onclick="copyText('042810082265')">SALIN NOMOR</button></div><div class="bank"><div class="owner">NAJIB HUDORI</div><div class="bankname">BANK INA</div><div class="account">1002339605</div><button class="btn copy" onclick="copyText('1002339605')">SALIN NOMOR</button></div></div></div></section>
+
+<section class="section social" id="sosmed">
+  <div class="wrap reveal">
+    <div class="kicker">Follow our story</div>
+    <h2 class="title">Temukan Kami</h2>
+    <p>Ikuti momen dan kabar terbaru Salma &amp; Najib melalui media sosial.</p>
+    <div class="social-links">
+      <a class="social-link facebook" href="https://www.facebook.com/profile.php?id=100076539213751" target="_blank" rel="noopener noreferrer" aria-label="Facebook Salma">
+        <span class="social-icon">f</span><span>Facebook • Salma</span>
+      </a>
+      <a class="social-link tiktok" href="https://tiktok.com/@najibhudori" target="_blank" rel="noopener noreferrer" aria-label="TikTok Najib">
+        <span class="social-icon">♪</span><span>TikTok • Najib</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="initial-logo" aria-hidden="true"><span class="s">S</span><span class="n">N</span><span class="dot">✦</span></div><div class="names2">SALMA LATIFAH & NAJIB HUDORI</div><small>💍 25 OKTOBER 2026<br>📍 Cimangkok, Sukalarang, Sukabumi<br><br>Wassalamu'alaikum Warahmatullahi Wabarakatuh</small></footer>
+
+<button class="music" id="musicBtn" onclick="toggleMusic()" aria-label="Putar atau jeda musik">♪</button>
+<audio id="audio" src="musik.mp3" loop autoplay preload="auto" playsinline></audio>
+
+<nav class="nav"><a href="#home">Home</a><a href="#mempelai">Mempelai</a><a href="#galeri">Foto</a><a href="#video">Video</a><a href="#acara">Acara</a><a href="#gift">Gift</a><a href="#rsvp">RSVP</a></nav>
+</div>
+
+<script>
+
+function setGuestName(){
+  const p=new URLSearchParams(window.location.search);
+  const raw=p.get('to');
+  const el=document.getElementById('guestName');
+  if(raw && el){
+    const clean=raw.replace(/\+/g,' ').trim();
+    if(clean) el.textContent=clean;
+  }
+}
+setGuestName();
+
+const target=new Date('2026-10-25T10:00:00+07:00').getTime();
+function tick(){let x=Math.max(0,target-Date.now());let d=Math.floor(x/864e5);x%=864e5;let h=Math.floor(x/36e5);x%=36e5;let m=Math.floor(x/6e4);let s=Math.floor((x%6e4)/1e3);document.querySelector('#d').textContent=d;document.querySelector('#h').textContent=String(h).padStart(2,'0');document.querySelector('#m').textContent=String(m).padStart(2,'0');document.querySelector('#s').textContent=String(s).padStart(2,'0')}tick();setInterval(tick,1000);
+
+let slideIndex=0;
+const slides=document.getElementById('slides');
+const dots=document.getElementById('dots');
+for(let i=0;i<6;i++){const dot=document.createElement('span');dot.className='dot'+(i===0?' active':'');dot.onclick=()=>showSlide(i);dots.appendChild(dot)}
+function showSlide(i){slideIndex=(i+6)%6;slides.style.transform=`translateX(-${slideIndex*100}%)`;document.querySelectorAll('.dot').forEach((d,n)=>d.classList.toggle('active',n===slideIndex))}
+function moveSlide(n){showSlide(slideIndex+n)}
+setInterval(()=>moveSlide(1),5000);
+
+function copyText(t){navigator.clipboard?.writeText(t).then(()=>alert('Nomor rekening berhasil disalin.')).catch(()=>prompt('Salin nomor rekening:',t))}
+
+function submitRsvp(e){
+ e.preventDefault();
+ const nama=document.getElementById('nama').value;
+ const hadir=document.getElementById('hadir').value;
+ const jumlah=document.getElementById('jumlah').value;
+ const pesan=document.getElementById('pesan').value;
+ const nomor='6281563308128';
+ const text=`Assalamu'alaikum Salma & Najib.%0A%0ANama: ${encodeURIComponent(nama)}%0AKehadiran: ${encodeURIComponent(hadir)}%0AJumlah tamu: ${encodeURIComponent(jumlah)}%0AUcapan: ${encodeURIComponent(pesan)}`;
+ window.open(`https://wa.me/${nomor}?text=${text}`,'_blank');
+}
+
+const audio=document.getElementById('audio');
+const musicBtn=document.getElementById('musicBtn');
+let fadeTimer=null;
+function setMusicPlaying(state){musicBtn.textContent=state?'Ⅱ':'♪';musicBtn.classList.toggle('playing',state);musicBtn.setAttribute('aria-label',state?'Pause musik':'Putar musik')}
+function fadeVolume(to=1,duration=700){clearInterval(fadeTimer);const start=audio.volume,diff=to-start,steps=Math.max(1,Math.floor(duration/50));let i=0;fadeTimer=setInterval(()=>{i++;audio.volume=Math.min(1,Math.max(0,start+diff*(i/steps)));if(i>=steps){clearInterval(fadeTimer);fadeTimer=null}},50)}
+function startMusic(){audio.volume=0;audio.play().then(()=>{setMusicPlaying(true);fadeVolume(.92,900)}).catch(()=>{})}
+function toggleMusic(){if(audio.paused){startMusic()}else{fadeVolume(0,350);setTimeout(()=>{audio.pause();audio.volume=.92;setMusicPlaying(false)},380)}}
+
+// Music: request autoplay immediately. Modern browsers may block audible
+// autoplay; in that case, start at the first user interaction.
+(function(){
+  const audio = document.getElementById('audio');
+  if(!audio) return;
+  audio.loop = true;
+  audio.autoplay = true;
+  audio.preload = 'auto';
+
+  const startMusic = () => {
+    audio.play().then(()=>{
+      if(typeof setMusicPlaying === 'function') setMusicPlaying(true);
+    }).catch(()=>{});
+  };
+
+  // Best effort: starts automatically where the browser permits it.
+  startMusic();
+  setTimeout(startMusic, 600);
+  setTimeout(startMusic, 1600);
+
+  // Fallback for mobile browsers that block audible autoplay.
+  ['touchstart','pointerdown','click','scroll','keydown'].forEach(evt=>{
+    window.addEventListener(evt, startMusic, {once:true, passive:true});
+  });
+
+  document.addEventListener('visibilitychange', ()=>{
+    if(!document.hidden && audio.paused) startMusic();
+  });
+})();
+
+function openInvitation(){startMusic();document.getElementById('mempelai').scrollIntoView({behavior:'smooth'});}
+audio.addEventListener('play',()=>setMusicPlaying(true));
+audio.addEventListener('pause',()=>setMusicPlaying(false));
+audio.addEventListener('ended',()=>{audio.currentTime=0;startMusic()});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+</script>
+</body></html>
