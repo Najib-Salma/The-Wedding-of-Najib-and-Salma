@@ -32,7 +32,7 @@
 <div class="verse">مِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</div>
 <div class="verse-id">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan-pasangan dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.”</div>
 <div class="eyebrow">THE WEDDING OF</div><div class="names">Salma <span class="amp">&</span> Najib</div><div class="date">25 OKTOBER 2026</div>
-<button class="btn" onclick="document.getElementById('mempelai').scrollIntoView()">BUKA UNDANGAN</button>
+<button class="btn" onclick="openInvitation()">BUKA UNDANGAN</button>
 </div></section>
 
 <section class="section couple" id="mempelai"><div class="wrap reveal">
@@ -67,7 +67,7 @@
 <footer class="footer"><div class="names2">SALMA LATIFAH & NAJIB HUDORI</div><small>💍 25 OKTOBER 2026<br>📍 Cimangkok, Sukalarang, Sukabumi<br><br>Wassalamu'alaikum Warahmatullahi Wabarakatuh</small></footer>
 
 <button class="music" id="musicBtn" onclick="toggleMusic()">♪</button>
-<audio id="audio" src="assets/musik.mp3" loop preload="none"></audio>
+<audio id="audio" src="musik.mp3" loop preload="none"></audio>
 
 <nav class="nav"><a href="#home">Home</a><a href="#mempelai">Mempelai</a><a href="#galeri">Foto</a><a href="#acara">Acara</a><a href="#gift">Gift</a><a href="#rsvp">RSVP</a></nav>
 </div>
@@ -101,5 +101,29 @@ let playing=false;
 function toggleMusic(){const a=document.getElementById('audio');const b=document.getElementById('musicBtn');if(!a.src){alert('Tambahkan file assets/musik.mp3 terlebih dahulu.');return}if(a.paused){a.play().then(()=>{playing=true;b.textContent='Ⅱ';b.classList.add('playing')}).catch(()=>alert('Tekan tombol musik sekali lagi untuk memulai.'))}else{a.pause();playing=false;b.textContent='♪';b.classList.remove('playing')}}
 
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+ const audio = document.getElementById('audio');
+const musicBtn = document.getElementById('musicBtn');
+
+function openInvitation() {
+  document.getElementById('mempelai').scrollIntoView();
+
+  audio.play().then(() => {
+    musicBtn.textContent = 'Ⅱ';
+    musicBtn.classList.add('playing');
+  }).catch(() => {});
+}
+
+function toggleMusic() {
+  if (audio.paused) {
+    audio.play().then(() => {
+      musicBtn.textContent = 'Ⅱ';
+      musicBtn.classList.add('playing');
+    });
+  } else {
+    audio.pause();
+    musicBtn.textContent = '♪';
+    musicBtn.classList.remove('playing');
+  }
+ }
 </script>
 </body></html>
